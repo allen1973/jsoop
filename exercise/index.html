@@ -1,9 +1,269 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <script src="index.js"></script>
+    <style>
+        .note {
+            column-count: 3;
+            column-width: 200px;
+            overflow-y: scroll;
+            height: 300px;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .b {
+            font-size: 16px;
+            list-style: none;
+            margin-left: -16px;
+            margin-top: 16px;
+            background: #efefef;
+            padding-left: 20px;
+            width: 96%;
+        }
+
+        .b:first-child {
+            margin-top: 0px;
+        }
+
+        ex {
+            border: 0px;
+            background-color: orange;
+            padding: 2px 4px;
+            border-radius: 5px;
+            font-size: 9px;
+            color: #ffffff;
+            display: inline;
+            margin-left: 10px;
+        }
+    </style>
 </head>
+
 <body>
+    <ul class="note">
+        <li class="b">JavaScript 語法介紹 </li>
+        <li>型別系統<ex>1-1</ex>
+        </li>
+        <li>undefined & null<ex>1-2</ex>
+            <ex>1-3</ex>
+        </li>
+        <li>truthy & falsy<ex>1-4</ex>
+            <ex>1-5</ex>
+        </li>
+        <li>function arguments<ex>1-6</ex>
+            <ex>1-7</ex>
+            <ex>1-8</ex>
+        </li>
+        <li>立即涵式(IIFE)<ex>1-9</ex>
+            <ex>1-10</ex>
+        </li>
+        <li>finally<ex>1-11</ex>
+            <ex>1-12</ex>
+            <ex>1-13</ex>
+        </li>
+        <li>switch<ex>1-14</ex>
+            <ex>1-15</ex>
+        </li>
+
+        <li class="b">JavaScript 語言特性
+        </li>
+        <li>範圍鏈(Scope chain)<ex>2-1</ex>
+            <ex>2-2</ex>
+            <ex>2-3</ex>
+            <ex>2-4</ex>
+        </li>
+        <li>閉包(Closure)<ex>2-5</ex>
+            <ex>2-6</ex>
+            <ex>2-7</ex>
+            <ex>2-8</ex>
+            <ex>2-9</ex>
+        </li>
+        <li>Currying<ex>2-10</ex>
+            <ex>2-11</ex>
+        </li>
+        <li>Hoisting<ex>2-12</ex>
+        </li>
+        <li>嚴格模式<ex>2-14</ex>
+            <ex>2-15</ex>
+            <ex>2-16</ex>
+        </li>
+        <li>浮點運算<ex>2-17</ex>
+            <ex>2-18</ex>
+        </li>
+
+        <li class="b">Javascript寫作風格
+        </li>
+        <li>大括號排版<ex>3-1</ex>
+        </li>
+        <li>空格<ex>3-2</ex>
+        </li>
+        <li>分號<ex>3-3</ex>
+        </li>
+        <li>with<ex>3-4</ex>
+        </li>
+        <li>等號<ex>3-5</ex>
+        </li>
+        <li>語句合併<ex>3-6</ex>
+        </li>
+        <li>變數宣告<ex>3-7</ex>
+        </li>
+        <li>全域變數<ex>3-8</ex>
+        </li>
+        <li>命名方式<ex>3-9</ex>
+        </li>
+        <li>自增與自減<ex>3-10</ex>
+        </li>
+        <li>區塊<ex>3-11</ex>
+        </li>
+
+        <li class="b">JavaScript 物件導向
+        </li>
+        <li>基本介紹
+        </li>
+        <li>類別與物件
+        </li>
+        <li>物件導向特性
+        </li>
+        <li>物件的組成
+        </li>
+        <li>this<ex>4-1</ex>
+        </li>
+        <li>建立物件 1<ex>4-2</ex>
+            <ex>4-3</ex>
+        </li>
+        <li>建立物件2
+        </li>
+        <li>New<ex>4-4</ex>
+            <ex>4-5</ex>
+        </li>
+        <li>pratotype<ex>4-6</ex>
+            <ex>4-7</ex>
+            <ex>4-8</ex>
+        </li>
+        <li>物件<ex>4-9</ex>
+        </li>
+        <li>共用方法<ex>4-10</ex>
+            <ex>4-11</ex>
+        </li>
+        <li>内建物件原型方法<ex>4-12</ex>
+        </li>
+        <li>私有涵式與變數<ex>4-13</ex>
+        </li>
+        <li>唯讀方法和屬性<ex>4-14</ex>
+        </li>
+        <li>實字模式<ex>4-15</ex>
+        </li>
+        <li>實字方式操作<ex>4-16</ex>
+        </li>
+        <li>命名空間<ex>4-17</ex>
+        </li>
+
+        <li class="b">JavaScript 物件繼承
+        </li>
+        <li>繼承(Inherit)
+        </li>
+        <li>call apply、 bind 比較<ex>5-1</ex>
+            <ex>5-2</ex>
+        </li>
+        <li>繼承屬性與方法<ex>5-3</ex>
+        </li>
+        <li>為什么call能夠繼承屬性與方法<ex>5-4</ex>
+        </li>
+        <li>繼承原型方法<ex>5-5</ex>
+            <ex>5-6</ex>
+        </li>
+        <li>繼承原型方法避免共享參考<ex>5-7</ex>
+        </li>
+        <li>傳遞參數到父層類別<ex>5-8</ex>
+        </li>
+        <li>暫時類別繼承方法<ex>5-9</ex>
+        </li>
+        <li>Object.create繼承方法<ex>5-10</ex>
+        </li>
+        <li>繼承的實際案例<ex>5-11</ex>
+        </li>
+
+        <li class="b">JavaScript設計模式
+        </li>
+        <li>基本介紹
+        </li>
+        <li>小技巧「防止忘記 new 」<ex>6-1</ex>
+        </li>
+        <li>單體模式(Singleton)<ex>6-2</ex>
+        </li>
+        <li>簡單工廠模式(Factory)<ex>6-3</ex>
+        </li>
+        <li>迭代器模式(Iterator)<ex>6-4</ex>
+        </li>
+        <li>裝飾者模式(Decorator)<ex>6-5</ex>
+        </li>
+        <li>策略模式(Strategy)<ex>6-6</ex>
+        </li>
+        <li>外觀模式(Facade)<ex>6-7</ex>
+        </li>
+        <li>代理模式(Proxy)<ex>6-8</ex>
+        </li>
+        <li>中介者模式(Mediator)<ex>6-9</ex>
+            <ex>6-9-2</ex>
+        </li>
+        <li>觀察者模式(Observer)<ex>6-10</ex>
+        </li>
+        <li>繼承關你圖
+        </li>
+
+
+        <li class="b">ES6語法介紹
+        </li>
+        <li>變數範圍鏈Variable Scoping)<ex>7-1</ex>
+        </li>
+        <li>常數(Constants)<ex>7-2</ex>
+            <ex>7-3</ex>
+        </li>
+        <li>涵式範圍鏈(Function Scoping)<ex>7-4</ex>
+        </li>
+        <li>箭頭涵式(Arrow Functions)<ex>7-5</ex>
+            <ex>7-6</ex>
+            <ex>7-7</ex>
+        </li>
+        <li>涵式參數擴展(Extended Parameter
+        <li>Handling)<ex>7-8</ex>
+            <ex>7-9</ex>
+            <ex>7-10</ex>
+        </li>
+        <li>字串樣板(Template Strings)<ex>7-11</ex>
+            <ex>7-12</ex>
+        </li>
+        <li>二進位與八進位<ex>7-13</ex>
+        </li>
+        <li>增強物件屬性(Enhanced Object
+        </li>
+        <li>Properties)<<ex>7-14</ex>
+                <ex>7-15</ex>
+                <ex>7-16</ex>
+        </li>
+        <li>解構分配(Destructuring Assignment)<ex>7-17</ex>
+            <ex>7-18</ex>
+            <ex>7-19</ex>
+            <ex>7-20</ex>
+        </li>
+        <li>類別(Class)<ex>7-23</ex>
+            <ex>7-24</ex>
+            <ex>7-25</ex>
+            <ex>7-26</ex>
+        </li>
+        <li>生成器(Generator)<ex>7-27</ex>
+        </li>
+        <li>新增內建方法(New Built-In Methods)<ex>7-28</ex>
+            <ex>7-29</ex>
+            <ex>7-30</ex>
+            <ex>7-31</ex>
+            <ex>7-32</ex>
+        </li>
+        <li>非同步處理(Promise)<ex>7-33</ex>
+        </li>
+    </ul>
 </body>
+
 </html>
